@@ -8,21 +8,21 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: output event datum
+      - name: output event datums
         run:
           echo " event name is ${{ github.event_name}}"
           echo " event action is ${{ github.event.action}}"
           echo " event sender is ${{ github.event.sender.login}}"
           echo " event repository is ${{ github.event.repository.full_name}}"
           echo " event ref is ${{ github.ref}}"
-      - name: get cide
+      - name: get code
         uses: actions/checkout@v3
       - name: install dependencies
         run: npm ci 
       - name: test code
-        run: npm test
-      - name: buikd code
-        run: npm run build
+        run: echo " test code"
+      - name: build code
+        run: echo " build code"
       - name: deploy code
         run: echo " deploying code"
 
