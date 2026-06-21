@@ -8,7 +8,7 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: output event data
+      - name: output event datum
         run:
           echo " event name is ${{ github.event_name}}"
           echo " event action is ${{ github.event.action}}"
