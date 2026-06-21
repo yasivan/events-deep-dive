@@ -2,7 +2,7 @@ name: Events demo
 on:
   pull_request:
     types: [opened]
-  workflow_dispact:
+  workflow_dispatch:
 
 jobs:
   deploy:
