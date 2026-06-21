@@ -3,6 +3,14 @@ on:
   pull_request:
     types: [opened]
   workflow_dispatch:
+  push:
+    branches:
+      - main #main
+      - 'dev-%' # dev-new dev-this-is-new
+      - dev
+      - 'feat/**' # feat/new
+    paths:
+      - '.github/workflows/*'
 
 jobs:
   deploy:
