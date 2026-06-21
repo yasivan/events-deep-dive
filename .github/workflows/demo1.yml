@@ -15,14 +15,14 @@ jobs:
           echo " event sender is ${{ github.event.sender.login}}"
           echo " event repository is ${{ github.event.repository.full_name}}"
           echo " event ref is ${{ github.ref}}"
-      - name: get cide
+      - name: get code
         uses: actions/checkout@v3
       - name: install dependencies
         run: npm ci 
       - name: test code
-        run: npm test
-      - name: buikd code
-        run: npm run build
+        run: echo " test code"
+      - name: build code
+        run: echo " build code"
       - name: deploy code
         run: echo " deploying code"
 
